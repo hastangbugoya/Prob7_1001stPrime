@@ -3,7 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+/*
 
+Problem #7 :  10001st prime
+By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+
+What is the 10 001st prime number? 
+
+ */
 namespace Prob7_1001stPrime
 {
     class Program
@@ -11,16 +18,11 @@ namespace Prob7_1001stPrime
         static void Main(string[] args)
         {
             int primectr = 0;
-            int lastprime;
             long i = 2;
             long j = 0;
             double s;
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
             while (primectr < 10001)
             {
-                //if (primectr == 99)
-                //    lastprime = 2;
                 j = 2;
                 s = Math.Sqrt(i);
                 if (i % 2 != 0)
@@ -29,14 +31,12 @@ namespace Prob7_1001stPrime
                 if (j > s)
                 {
                     primectr++;
-                    Console.WriteLine(primectr + " " + i);
+                    //Console.WriteLine(primectr + " " + i);
                 }
                 i++;
             }
             Console.WriteLine("Hello World!  " + (i - 1));
             Console.ReadKey();
-
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
-        }
+         }
     }
 }
